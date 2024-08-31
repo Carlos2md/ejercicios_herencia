@@ -4,7 +4,7 @@ class Vehiculo():
         self.tipo = tipo
         self.modelo = modelo
         self.vel_max = vel_max
-        self.__nro_matricula = matricula
+        self.matricula = matricula
 
     def acelerar(self):
         print(f"Velocidad maxima alcanzada {self.vel_max} km/h")

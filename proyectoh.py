@@ -1,47 +1,51 @@
 class Usuario():
-    def __init__(self, marca, tipo, modelo, vel_max, matricula):
-        self.marca = marca
-        self.tipo = tipo
-        self.modelo = modelo
-        self.vel_max = vel_max
-        self.matricula = matricula
+    def __init__(self, nombre, edad, direccion, numero_Cuenta, saldo_Actual):
+        self.nombre = nombre
+        self.edad = edad
+        self.direccion = direccion
+        self.numero_Cuenta = numero_Cuenta
+        self.saldo_Actual = saldo_Actual
 
-    def acelerar(self):
+    def depositan(self):
         print(f"Velocidad maxima alcanzada {self.vel_max} km/h")
        
-    def frenar(self):
+    def debitan(self):
         print(f"velocidad actual: 0")
+    
+    def cumpleanos(Self):
+        edad=+edad
        
 
-class Carro(Vehiculo):
-    def __init__(self, marca, tipo, modelo, vel_max, matricula, placa, pasajeros):
-        super().__init__(marca, tipo, modelo, vel_max, matricula)
-        self.__placa = placa
-        self.pasajeros = pasajeros
-        self.ruedas = 4
+class Cliente(Usuario):
+    def __init__(self, nombre, edad, direccion, numero_Cuenta, saldo_Actual, id_Cliente, profesion, prestamoEnCurso):
+        super().__init__(nombre, edad, direccion, numero_Cuenta, saldo_Actual)
+        self.id_Cliente = id_Cliente
+        self.profesion = profesion
+        self.prestamoEnCurso = prestamoEnCurso
    
     def solicitar_informacion(self):
         print(f"Este carro cuenta con numero de matricula {self._Vehiculo__nro_matricula} y fue fabricado en {self.modelo} y su placa es {self.__placa}")
        
-class Moto(Vehiculo):
-    def __init__(self, marca, tipo, modelo, vel_max, matricula, placa):
-        super().__init__(marca, tipo, modelo, vel_max, matricula)
-        self.__placa = placa
-        self.pasajeros = 2
-        self.ruedas = 2
+class Empleado(Usuario):
+    def __init__(self, nombre, edad, direccion, numero_Cuenta, saldo_Actual, id_Empleado, cargo, sueldo, adelandoDeSueldo):
+        super().__init__(nombre, edad, direccion, numero_Cuenta, saldo_Actual)
+        self.id_Empleado = id_Empleado
+        self.cargo = cargo
+        self.sueldo = sueldo
+        self.adelandoDeSueldo = adelandoDeSueldo
    
     def solicitar_informacion(self):
         print(f"Esta moto tiene placa {self.__placa} y es de marca {self.marca}")
 
-carro1 = Carro("chevrolet", "terrestre", 2010, 140, "car12345", "AVK001", 4)
+cliente1 = Usuario("chevrolet", "terrestre", 2010, 140, "car12345", "AVK001", 4)
 
-carro1.solicitar_informacion()
-carro1.acelerar()
-print(carro1.pasajeros)
+cliente1.solicitar_informacion()
+cliente1.acelerar()
+print(cliente1.pasajeros)
 
 print("---------------------------------")
 
-moto1 = Moto("Yamaha", "terrestre", 2020, 180, "mot59986", "CB586")
-moto1.solicitar_informacion()
-moto1.acelerar()
-print(moto1.marca)
+empleado1 = Empleado("Yamaha", "terrestre", 2020, 180, "mot59986", "CB586")
+empleado1.solicitar_informacion()
+empleado1.acelerar()
+print(empleado1.marca)
